@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: todo-auth
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todo-auth
+    username: bony
+    password: bony
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
