@@ -10,10 +10,9 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class UserDTO {
+public class UserDto {
     private UUID id;
     private String username;
     private Role role;
     private boolean enabled;
 }
-
