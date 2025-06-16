@@ -1,4 +1,4 @@
-package com.todoapp.todo_auth.domain.mapper;
+package com.todoapp.todo_auth.mapper;
 
 import com.todoapp.todo_auth.domain.dto.UserDTO;
 import com.todoapp.todo_auth.domain.entity.User;
