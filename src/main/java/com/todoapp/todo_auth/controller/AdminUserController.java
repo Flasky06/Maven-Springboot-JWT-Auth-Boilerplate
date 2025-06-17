@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/admin/users")
 @RequiredArgsConstructor
@@ -19,6 +21,12 @@ public class AdminUserController {
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<UserDto> createUser(@RequestBody CreateUserRequest request) {
         return ResponseEntity.ok(userService.createUserByAdmin(request));
+    }
+
+    @GetMapping
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public ResponseEntity<List<UserDto>> getAllUser(){
+        return ResponseEntity.ok(userService.getAllUsers());
     }
 
 }

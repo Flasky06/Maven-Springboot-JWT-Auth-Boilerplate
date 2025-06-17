@@ -35,6 +35,13 @@ public class PostController {
         return ResponseEntity.ok(postService.getPostsByUser(user));
     }
 
+
+    @GetMapping("/category/{categoryId}")
+    public ResponseEntity<List<PostDto>> getPostsByCategory(@PathVariable UUID categoryId) {
+        return ResponseEntity.ok(postService.getPostsByCategory(categoryId));
+    }
+
+
     @GetMapping("/{id}")
     public ResponseEntity<PostDto> getPostById(@PathVariable UUID id) {
         return ResponseEntity.ok(postService.getPostById(id));

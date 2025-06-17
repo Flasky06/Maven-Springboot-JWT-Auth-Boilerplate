@@ -1,6 +1,7 @@
 package com.todoapp.todo_auth.service;
 
 import com.todoapp.todo_auth.domain.dto.PostDto;
+import com.todoapp.todo_auth.domain.entity.Category;
 import com.todoapp.todo_auth.domain.entity.User;
 import org.w3c.dom.stylesheets.LinkStyle;
 
@@ -14,4 +15,7 @@ public interface PostService {
     PostDto getPostById(UUID postId);
     PostDto updatePost(UUID postId, PostDto postDto, User user);
     void deletePost(UUID postId, User user);
+    List<PostDto> getPostsByCategory(UUID categoryId);
+
+
 }
